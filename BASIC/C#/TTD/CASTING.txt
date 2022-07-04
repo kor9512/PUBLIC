@@ -1,0 +1,30 @@
+MergeNames
+1.
+List<string> list2 = new ArrayList<String>();
+//ArrayList()는 모든 Object를 넣을 수 있기에 <String>로 한정해주는 것
+//List<string>과 사용 하는 방식이 동일해진다
+List<string> list = new List<string>();
+
+string[] names1 = new string[] { "X", "Y", "Z" };
+String[] names2 = (String[])list.ToArray();
+// list<T>를 ToArray()로 변환하여 T[]로 바꾼 후 (String[]) 캐스팅.  
+String[] names2 = new String[list.Count()];
+//new String[]을 생성하되, Size를 list<T>의 사이즈만큼 잡아주기. 
+
+System.Collections
+Object -> ArrayList
+ArrayList Class.
+ArrayList _list = new ArrayList();
+List<T> _list = new ArrayList<T>(); // Generic. ArrayList범위를 한정.
+
+System.Collections.Generic
+Object -> List<T>
+List<T> Class.
+List<T> _list = new List<T>();
+
+ToArray();
+-> T[]로 변환 
+
+ToList();
+-> List<T> 로 변환 
+//IEnumerable<T> -> List<T>

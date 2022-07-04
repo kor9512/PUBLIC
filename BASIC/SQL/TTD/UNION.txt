@@ -1,0 +1,19 @@
+1. UNION (DISTINCT) 
+-- DISTINCT 생략 가능
+SELECT * FROM A 
+UNION DISTINCT
+SELECT * FROM B;
+-> 중복 ROW를 자동으로 제거한다.
+
+2. UNION ALL 
+중복 제거 없이 모든 컬럼을 보여준다.
+
+처리 과정 
+UNION[ALL|DISTINCT]에 적합한 임시 테이블을 메모리 테이블로 생성
+UNION DISTINCT의 경우 임시 테이블의 모든 컬럼으로 Unique Hash 인덱스 생성
+서브쿼리 1 실행후 결과를 임시 테이블에 복사
+서브쿼리 2 실행후 결과를 임시 테이블에 복사
+임시 테이블이 특정 사이즈 이상으로 커지면 임시 테이블을 디스크 임시 테이블로 변경
+임시 테이블을 읽어 클라이언트에 결과 전송
+임시 테이블 삭제 
+-> 크기가 클 경우 좋지 않다. 
