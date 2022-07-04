@@ -1,0 +1,8 @@
+MergeNames
+1.Distinct()
+https://docs.microsoft.com/ko-kr/dotnet/api/system.linq.enumerable.distinct?view=netcore-3.1
+Distinct<TSource>(IEnumerable<TSource>)
+list.Distinct().ToList();
+
+LINQ 구문은 IEnumerable 인터페이스를 반환
+인터페이스가 아닌 구체화된 클래스가 필요할 때 변환 연산자를 활용하여 Array, List, Dictionary 타입으로 변환
