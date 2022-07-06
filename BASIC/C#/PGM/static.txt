@@ -1,0 +1,2 @@
+public static void Main()
+-> static이 없는 함수를 사용하고 싶으면 객체의 선언이 필요.

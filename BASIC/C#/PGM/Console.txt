@@ -1,0 +1,4 @@
+Console.Clear();
+String[] s;
+s = Console.ReadLine().Split(' ');
+int a = Int32.Parse(s[0]);
