@@ -1,0 +1,6 @@
+StringBuilder sb = new StringBuilder("");
+
+public System.Text.StringBuilder Append (char value);
+public System.Text.StringBuilder Remove (int startIndex, int length);
+
+Environment.NewLine == \r + \n
