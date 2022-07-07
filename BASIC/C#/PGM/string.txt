@@ -1,0 +1,4 @@
+string.Concat(Enumerable.Repeat("*", phone_number.Length - 4));
+//https://docs.microsoft.com/ko-kr/dotnet/api/system.string.concat?view=netcore-3.1
+//https://docs.microsoft.com/ko-kr/dotnet/csharp/how-to/concatenate-multiple-strings
+//phone_number[N]
