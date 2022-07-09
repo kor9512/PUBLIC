@@ -5,17 +5,17 @@ using System.Linq;
 
 namespace ConsoleProject
 {
-    public class Node
+    public class SearchTree_Node
     {
         public int Value { get; set; }
         
-        public Node Left { get; set; }
+        public SearchTree_Node Left { get; set; }
 
-        public Node Right { get; set; }
-        public Node Before { get; set; }
+        public SearchTree_Node Right { get; set; }
+        public SearchTree_Node Before { get; set; }
         public bool Visit { get; set; }
 
-        public Node(int value, Node left, Node right)
+        public SearchTree_Node(int value, SearchTree_Node left, SearchTree_Node right)
         {
             Visit = false;
             Value = value;
@@ -24,13 +24,13 @@ namespace ConsoleProject
         }
     }
 
-    public class BinarySearchTree
+    /*
+    public class SearchTree
     {
 
-        
-        public static bool Contains(Node root, int value)
+        public static bool Contains(SearchTree_Node root, int value)
         {
-            HashSet<Node> NodeList = new HashSet<Node>() { };
+            HashSet<SearchTree_Node> NodeList = new HashSet<SearchTree_Node>() { };
         
             while (true)
             { 
@@ -41,7 +41,7 @@ namespace ConsoleProject
 
                     if (root.Value == value)
                     {   
-                        foreach(Node node in NodeList)node.Visit = false;
+                        foreach(SearchTree_Node node in NodeList)node.Visit = false;
                         return true; }
 
                     if (!(root.Visit != true && root.Left.Visit != true && root.Right.Visit != true))
@@ -71,29 +71,28 @@ namespace ConsoleProject
                 }
                 else
                 {
-                    foreach (Node node in NodeList) node.Visit = false;
+                    foreach (SearchTree_Node node in NodeList) node.Visit = false;
                     return false;
                     throw new IndexOutOfRangeException("Null Root");
                 }
              }
 
-            foreach (Node node in NodeList) node.Visit = false;
+            foreach (SearchTree_Node node in NodeList) node.Visit = false;
             return false;
             //throw new NotImplementedException("Waiting to be implemented.");
         }
-        
         public static void Main(string[] args)
         {
             // 15M
-            Node n4 = new Node(4, null, null);
-            Node n5 = new Node(5, null, null);
-            Node n6 = new Node(6, null, null);
-            Node n7 = new Node(7, null, null);
+            SearchTree_Node n4 = new SearchTree_Node(4, null, null);
+            SearchTree_Node n5 = new SearchTree_Node(5, null, null);
+            SearchTree_Node n6 = new SearchTree_Node(6, null, null);
+            SearchTree_Node n7 = new SearchTree_Node(7, null, null);
 
-            Node n1 = new Node(1, n4, n5);
-            Node n3 = new Node(3, n6, n7);
+            SearchTree_Node n1 = new SearchTree_Node(1, n4, n5);
+            SearchTree_Node n3 = new SearchTree_Node(3, n6, n7);
 
-            Node n2 = new Node(2, n1, n3);
+            SearchTree_Node n2 = new SearchTree_Node(2, n1, n3);
             // 2-> 1,3 
             // 1 -> 4,5
             // 3 -> 6,7
@@ -103,5 +102,6 @@ namespace ConsoleProject
             Console.WriteLine(Contains(n2, 8));
         }
         
-    }
+
+    }*/
 }
