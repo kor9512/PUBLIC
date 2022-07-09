@@ -1,0 +1,14 @@
+string 대소문자 없이 비교하는 법.
+// https://docs.microsoft.com/ko-kr/dotnet/api/system.string.equals?view=netcore-3.1
+// https://docs.microsoft.com/ko-kr/dotnet/api/system.stringcomparison?view=netcore-3.1
+// string.Equals(string,StringComparison.enum)
+// StringComparison.OrdinalIgnoreCase 대소문자 X
+// StringComparison.Ordinal           대소문자 O
+
+string var1 = "String";
+string var2 = "string";
+
+if (var1.Equals(var2, StringComparison.Ordinal)) Console.WriteLine("YEAH BASKETBALL!"); 
+else Console.WriteLine("HOLY BASKETBALL!");
+
+// lower이나 upper을 양변에 주고 비교하는 것도 가능하나, 그럴 경우 문자가 뭉개지는 현상이 있을 수 있다. 
