@@ -1,0 +1,8 @@
+TTD
+https://www.testdome.com/questions?sort=none&sets=public%2Cpremium&skills=4-18&page=1
+
+PGR
+https://school.programmers.co.kr/learn/challenges
+
+LTC
+https://leetcode.com/problemset/all/
