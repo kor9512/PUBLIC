@@ -54,7 +54,7 @@ namespace ConsoleProject
             ans = false;
             return;
         }
-
+        /*
         public static void Main(string[] args)
         {
             // 15M
@@ -75,5 +75,6 @@ namespace ConsoleProject
             Console.WriteLine(Contains(n2, 4));
             Console.WriteLine(Contains(n2, 8));
         }
+        */
     }
 }
