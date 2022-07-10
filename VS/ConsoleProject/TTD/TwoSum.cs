@@ -10,59 +10,65 @@ namespace ConsoleProject
 
         public static Tuple<int, int> FindTwoSum(IList<int> list, int sum)
         {
+            try
+            {
+                // IList Sort. 
+                IEnumerable<int> sortedEnum = list.OrderBy(x => x);
+                List<int> sortedList = sortedEnum.ToList();
 
-            // IList Sort. 
-            IEnumerable<int> sortedEnum = list.OrderBy(x => x);
-            List<int> sortedList = sortedEnum.ToList();
+                //List.Sort또한 사용 가능. 
 
-            //List.Sort또한 사용 가능. 
+                int idx = 0;
+                int idy = sortedList.Count - 1;
 
-            int idx = 0;
-            int idy = sortedList.Count - 1;
+                if (idx == idy)
+                {
+                    return null;
+                }
 
-            if(idx == idy)
+                while (idx < sortedList.Count - 1)
+                {
+                    if (sortedList[idx] + sortedList[idy] < sum)
+                    {
+                        idx++;
+                    }
+                    else if (sortedList[idx] + sortedList[idy] > sum)
+                    {
+                        idy--;
+                    }
+                    else
+                    {
+                        int inX = 0;
+                        int inY = 0;
+
+                        for (int inidx = 0; inidx < list.Count - 1; inidx++)
+                        {
+                            if (list[inidx] == sortedList[idx])
+                            {
+                                inX = inidx;
+                                break;
+                            }
+                        }
+                        for (int inidy = list.Count - 1; inidy > 0; inidy--)
+                        {
+                            if (list[inidy] == sortedList[idy])
+                            {
+                                inY = inidy;
+                                break;
+                            }
+                        }
+                        return new Tuple<int, int>(inX, inY);
+
+                    }
+                }
+
+
+                return null;
+            }
+            catch(System.ArgumentOutOfRangeException e)
             {
                 return null;
             }
-
-            while (idx< sortedList.Count-1)
-            {
-                if (sortedList[idx] + sortedList[idy] == sum) 
-                {
-                    int inX = 0;
-                    int inY = 0;
-
-                    for (int inidx = 0; inidx<list.Count-1 ; inidx++)
-                    {
-                        if (list[inidx] == sortedList[idx]) 
-                        {
-                            inX = inidx;  
-                            break;
-                        }
-                    }
-                    for (int inidy = list.Count - 1; inidy > 0; inidy--)
-                    {
-                        if (list[inidy] == sortedList[idy])
-                        {
-                            inY = inidy;
-                            break;
-                        }
-                    }
-                    return new Tuple<int, int>(inX, inY);
-                }
-
-                if (idx<idy)
-                {
-                    idy--;
-                }
-                else if (idx == idy)
-                {
-                    idx++;
-                    idy = sortedList.Count - 1;
-                }
-            }
-
-            return null;            
             //throw new NotImplementedException("Waiting to be implemented.");
         }
         
