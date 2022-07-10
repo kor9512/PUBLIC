@@ -7,34 +7,50 @@ namespace ConsoleProject
 {
     class TwoSum
     {
-        // 값이 아닌 idx를 반환하는 것이다!
-        //Tuple<int, int> tuAnswer = null;
-        //List<Tuple<int, int>> TuList;
-        //List<Tuple<int, int>> TuList = new List<Tuple<int, int>>(null);
-        //List<Tuple<int, int>> TuList = new List<Tuple<int, int>>();
-
-        //TuList.Add( new Tuple<int, int>(list[idx], list[idy]) );
-        //Tuple<int, int> tuAnswer = new Tuple<int, int>(list[idx], list[idy]);
-        //TuList.Add(new Tuple<int, int>(list[idx], list[idy]));
-        //TuList.Add(new Tuple<int, int>(idx, idy));
-        //return TuList[0];// new Tuple<int, int>(idx, idy);   
-
-        //(System.NullReferenceException e) { return null; }
-        //(System.ArgumentOutOfRangeException e2){ return null;}
 
         public static Tuple<int, int> FindTwoSum(IList<int> list, int sum)
         {
+
+            // IList Sort. 
+            IEnumerable<int> sortedEnum = list.OrderBy(x => x);
+            List<int> sortedList = sortedEnum.ToList();
+
+            //List.Sort또한 사용 가능. 
+
             int idx = 0;
-            int idy = list.Count - 1;
+            int idy = sortedList.Count - 1;
 
             if(idx == idy)
             {
                 return null;
             }
 
-            while (idx<list.Count-1)
-            {                   
-                if(list[idx] + list[idy] == sum) return new Tuple<int, int>(idx, idy);
+            while (idx< sortedList.Count-1)
+            {
+                if (sortedList[idx] + sortedList[idy] == sum) 
+                {
+                    int inX = 0;
+                    int inY = 0;
+
+                    for (int inidx = 0; inidx<list.Count-1 ; inidx++)
+                    {
+                        if (list[inidx] == sortedList[idx]) 
+                        {
+                            inX = inidx;  
+                            break;
+                        }
+                    }
+                    for (int inidy = list.Count - 1; inidy > 0; inidy--)
+                    {
+                        if (list[inidy] == sortedList[idy])
+                        {
+                            inY = inidy;
+                            break;
+                        }
+                    }
+                    return new Tuple<int, int>(inX, inY);
+                }
+
                 if (idx<idy)
                 {
                     idy--;
@@ -42,7 +58,7 @@ namespace ConsoleProject
                 else if (idx == idy)
                 {
                     idx++;
-                    idy = list.Count - 1;
+                    idy = sortedList.Count - 1;
                 }
             }
 
