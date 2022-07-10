@@ -1,0 +1,14 @@
+        // 값이 아닌 idx를 반환하는 것이다!
+        //Tuple<int, int> tuAnswer = null;
+        //List<Tuple<int, int>> TuList;
+        //List<Tuple<int, int>> TuList = new List<Tuple<int, int>>(null);
+        //List<Tuple<int, int>> TuList = new List<Tuple<int, int>>();
+
+        //TuList.Add( new Tuple<int, int>(list[idx], list[idy]) );
+        //Tuple<int, int> tuAnswer = new Tuple<int, int>(list[idx], list[idy]);
+        //TuList.Add(new Tuple<int, int>(list[idx], list[idy]));
+        //TuList.Add(new Tuple<int, int>(idx, idy));
+        //return TuList[0];// new Tuple<int, int>(idx, idy);   
+
+        //(System.NullReferenceException e) { return null; }
+        //(System.ArgumentOutOfRangeException e2){ return null;}
