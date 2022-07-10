@@ -24,19 +24,29 @@ namespace ConsoleProject
 
         public static Tuple<int, int> FindTwoSum(IList<int> list, int sum)
         {
+            int idx = 0;
+            int idy = list.Count - 1;
 
-            for (int idx=0; idx < list.Count; idx++)
+            if(idx == idy)
             {
-                for (int idy = idx + 1; idy < list.Count; idy++)
+                return null;
+            }
+
+            while (idx<list.Count-1)
+            {                   
+                if(list[idx] + list[idy] == sum) return new Tuple<int, int>(idx, idy);
+                if (idx<idy)
                 {
-                    if (list[idx] + list[idy] == sum)
-                    {
-                        return new Tuple<int, int>(idx, idy);
-                    }
+                    idy--;
+                }
+                else if (idx == idy)
+                {
+                    idx++;
+                    idy = list.Count - 1;
                 }
             }
-                return null;
-            
+
+            return null;            
             //throw new NotImplementedException("Waiting to be implemented.");
         }
         
