@@ -47,12 +47,13 @@ namespace ConsoleProject
             //throw new NotImplementedException("Waiting to be implemented.");
             */
         }
-
+        /*
         public static void Main(string[] args)
         {
             Console.WriteLine(SortedSearch.CountNumbers(new int[] { 1 }, 4));
             Console.WriteLine(SortedSearch.CountNumbers(new int[] { 1, 3, 5, 7 }, 4));
             Console.WriteLine(SortedSearch.CountNumbers(new int[] { 1, 3, 5, 7, 9 }, 5));
         }
+        */
     }
 }
