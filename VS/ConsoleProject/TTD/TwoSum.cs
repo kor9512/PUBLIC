@@ -71,7 +71,7 @@ namespace ConsoleProject
             }
             //throw new NotImplementedException("Waiting to be implemented.");
         }
-        
+        /*
         public static void Main(string[] args)
         {
             Tuple<int, int> indices = FindTwoSum(new List<int>() { 3, 1, 5, 7, 5, 9 }, 10);
@@ -80,6 +80,7 @@ namespace ConsoleProject
                 Console.WriteLine(indices.Item1 + " " + indices.Item2);
             }
         }
-        
+        */
+
     }
 }
