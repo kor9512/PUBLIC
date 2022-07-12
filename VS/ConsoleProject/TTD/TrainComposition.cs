@@ -68,7 +68,7 @@ namespace ConsoleProject
             }
             //throw new NotImplementedException("Waiting to be implemented.");
         }
-
+        /*
         public static void Main(string[] args)
         {
             TrainComposition train = new TrainComposition();
@@ -77,5 +77,7 @@ namespace ConsoleProject
             Console.WriteLine(train.DetachWagonFromRight()); // 7 
             Console.WriteLine(train.DetachWagonFromLeft()); // 13
         }
+        */
+        
     }
 }
