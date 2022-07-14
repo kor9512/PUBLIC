@@ -85,30 +85,11 @@ namespace ConsoleProject
             {
                 answer = answer.Concat(new int[] { dicMailed[strAnswerName] }).ToArray();
             }
-            /*
-           try { 
-            int inTmp = 0;
-            inTmp = dic[userName].Contains(userName) ? dic[userName].Count -1 : dic[userName].Count;  
-
-            if (inTmp >= k)
-            {
-                answer = answer.Concat(new int[] { inTmp }).ToArray();
-            }
-           }
-           catch(System.Collections.Generic.KeyNotFoundException e2)
-           {
-            continue;
-           }
-            */
-            // 자기가 신고가 넘었을 경우 메일이 발송된다고 생각했을 때 짠 코드.
             return answer;
         }
-            
-
         
-
-
-
+        /*
+         * 최대 2200ms 
         public static void Main()
         {
             ReportUser RU = new ReportUser();
@@ -125,5 +106,6 @@ namespace ConsoleProject
             foreach (int inRow in answer) Console.WriteLine(inRow);
             // 이런식으로 안써도 될거같긴한데
         }
+        */
     }
 }
