@@ -76,7 +76,7 @@ namespace ConsoleProject
             
             return answer;
         }
-
+        /*
         public static void Main()
         {
             //Fail
@@ -84,14 +84,14 @@ namespace ConsoleProject
             int[] lottos = new int[] { 44, 1, 0, 0, 31, 25 };
             int[] win_nums = new int[] { 31, 10, 45, 1, 6, 19 };
             MaxMinLotto lt = new MaxMinLotto();
-            /*
-             {44, 1, 0, 0, 31, 25}	{31, 10, 45, 1, 6, 19}	[3, 5]
-             {0, 0, 0, 0, 0, 0}	{38, 19, 20, 40, 15, 25}	[1, 6]
-             {45, 4, 35, 20, 3, 9}	{20, 9, 3, 45, 4, 35}	[1, 1]
-             */
+            
+            // {44, 1, 0, 0, 31, 25}	{31, 10, 45, 1, 6, 19}	[3, 5]
+            // {0, 0, 0, 0, 0, 0}	{38, 19, 20, 40, 15, 25}	[1, 6]
+            // {45, 4, 35, 20, 3, 9}	{20, 9, 3, 45, 4, 35}	[1, 1]
+             
             lt.solution(lottos, win_nums);
             Console.WriteLine("End");
         }
-        
+        */       
     }
 }
