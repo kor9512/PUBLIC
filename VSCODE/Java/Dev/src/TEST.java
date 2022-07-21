@@ -1,7 +1,21 @@
 public class TEST {
-    public static void main(String[] args) throws Exception {
-        for(int i=0; i<10 ;i++){
-            System.out.println("Hello, World!");
+    class  AAA {
+        int  a  =  10;
+        void  d()  {
+        System.out.print("Hi"); 
+        }       
+     }
+
+    public  class  BBB  extends  AAA {
+         a  =  20;
+         void  d()  {
+        System.out.print("Hello");
+     }
+     public  static  void  main(String[]  args)  { 
+        AAA  obj  =  new  BBB();
+        obj.d();
+        System.out.print(obj.a); 
         }
-    }
+     }
+
 }
