@@ -23,7 +23,7 @@ public class _1845_phoneKeMon {
         return answer;
     }
     
-    /*
+
     public  static  void  main(String[]  args)  { 
         _1845_phoneKeMon pk = new _1845_phoneKeMon();
         //int[] nums = new int[]{3,1,2,3}; // 2
@@ -34,5 +34,5 @@ public class _1845_phoneKeMon {
 
         System.out.println("End");
         }
-    */
+
     }
