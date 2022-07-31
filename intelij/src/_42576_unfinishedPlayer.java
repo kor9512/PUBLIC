@@ -114,7 +114,7 @@ public class _42576_unfinishedPlayer {
         return participant[i];
     }
     
-    /*
+
     public  static  void  main(String[]  args)  { 
         _42576_unfinishedPlayer uP = new _42576_unfinishedPlayer();
         System.out.println(uP.solutionA(new String[]{"mislav", "stanko", "mislav", "ana"} 
@@ -125,5 +125,5 @@ public class _42576_unfinishedPlayer {
             , new String[]{"josipa", "filipa", "marina", "nikola"})); // vinko
         System.out.println("End");
         }
-    */
+
     }
